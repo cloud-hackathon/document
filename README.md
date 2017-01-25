@@ -14,6 +14,9 @@
    * [サンプルコードをセットアップする](#サンプルコードをセットアップする)
    * [コンテナとは?](#コンテナとは)
    * [Dockerとは?](#dockerとは)
+      * [Dockerの概要](#dockerの概要)
+      * [Dockerイメージを作ってみよう](#dockerイメージを作ってみよう)
+      * [コンテナを組み合わせて使うには?](#コンテナを組み合わせて使うには)
    * [コンテナを動かしてみよう](#コンテナを動かしてみよう)
    * [開発サイクルを回してみよう](#開発サイクルを回してみよう)
    * [その他](#その他)
@@ -31,7 +34,6 @@
 * 自分が割り当てられたチーム名がわかること
 * チームのSlackチャネルに参加していること
 * SSH可能なターミナルが起動できること
-
 
 ## Githubのアカウント作成
 
@@ -89,9 +91,9 @@ Gitは、1人よりもチーム開発で使用するとありがたみが増し�
 
 * リモート(Githubとか)からレポジトリをダウンロード
 
-    ```
-    $ git clone <REPOSITORY PATH>
-    ```
+   ```
+   $ git clone <REPOSITORY PATH>
+   ```
 
 * ファイルの追加(インデックス登録)
 
@@ -136,7 +138,7 @@ Gitを本格的に使ってみたいなと思った方は、以下のサイト�
 各チームごとのIPアドレスとパスワードについてはスライドをご覧ください。
 
 ```
-$ ssh hacker@<YOUR TEAM ADDRESS>
+$ ssh ninja@<YOUR TEAM ADDRESS>
 ```
 
 ## サンプルコードをセットアップする
@@ -146,7 +148,90 @@ $ ssh hacker@<YOUR TEAM ADDRESS>
 
 ## コンテナとは?
 
+コンテナとは、OS上に隔離された空間(サンドボックス)を作成し、その中で別の環境を実行できる技術です。
+コンテナにはCPUやメモリなどのリソースが割り当てられ、プロセスの実行環境が分離されます。
+(namespaceやcgroupsというLinuxカーネルの技術を使っています。)
+
+[VMWare Player][18]や[Oracle VirtualBox][19]などのハイパーバイザ型の仮想化と比較して、高速・軽量という特徴があります。
+ハイパーバイザではハードウェアをシミュレートして仮想マシンを動作させているため、オーバーヘッドが大きくなりがちです。
+
+コンテナではカーネル(OSの基本的な部分)を共有し、実行環境を分離しているだけなので、オーバーヘッドが小さいです。
+そのため、起動・停止が高速だったり、1台のサーバ上で大量のコンテナを動かしたりできます。
+
+![container](img/container.jpg)
+
+* [コンテナ技術の基礎知識][11]
+* [注目を浴びる「Dockerコンテナ」、従来の仮想化と何が違うのか？][12]
+
 ## Dockerとは?
+
+### Dockerの概要
+
+🐳 [Docker][13]とは、コンテナを動かすためのオープンソースソフトウェアです。
+コンテナの中身(Dockerイメージ)を作る仕組みや、コンテナの実行環境を提供しています。
+
+Dockerイメージとは、コンテナとして動かすOSとアプリケーションをまとめたものです。
+軽量でどこでも同じように動くという特徴があるため、アプリケーションを配布するのに向いています。
+[Docker Hub][16]というWebサイトがあり、様々なDockerイメージが公開されています。
+
+![container_as_a_service](img/container_as_a_service.png)
+
+* [巷で話題のDockerとは?][14]
+* [Containers As A Service (CaaS) As Your New Platform For Application Development And Operations][17]
+
+### Dockerイメージを作ってみよう
+
+Dockerfileを使えば、Dockerイメージを簡単に作ることができます。
+ベースとなるイメージを指定し、イメージを作るために必要なコマンドを記述します。
+例えば、[Ubuntu][20]上で `hello-world.rb` というスクリプトを動かすコンテナを考えます。
+Rubyをインストールして、スクリプトをコンテナに追加するだけで完成です。
+
+```dockerfile
+FROM ubuntu:16.04
+
+RUN apt-get update && \
+    apt-get -y upgrade && \
+    apt-get -y install ruby
+
+ADD hello-world.rb
+
+CMD ruby hello-world.rb
+```
+
+```
+$ docker build -t hello-world .
+$ docker run hello-world
+```
+
+* [Dockerイメージの理解とコンテナのライフサイクル][15]
+
+### コンテナを組み合わせて使うには?
+
+Dockerでは、メンテナンス性を高めるために、コンテナで実行する機能を小さくしようと言われています。
+例えばWebアプリケーションの場合、アプリ用のコンテナと、データベース用のコンテナは分けることが多いです。
+このように複数のコンテナで構成されるサービスを動かしたいときに便利なのが[Docker Compose][16]です。
+docker-composeを使うことで、複数のコンテナを一度に起動できるだけでなく、依存関係の解決もしてくれます。
+(先にデータベース用のコンテナを起動してから、アプリ用のコンテナを起動するなど。)
+
+起動するコンテナとその設定は `docker-compose.yml` という[YAML][21]形式のファイルに記述します。
+例えば `web` と `database` というコンテナを起動する場合は、以下のような内容になります。
+`web` では8080番ポートが接続され、カレントディレクトリが `/code` にマウントされます。
+また、 `web` が依存する `database` が先に起動されます。
+
+```yaml
+version: '2'
+services:
+  web:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - "$PWD:/code"
+    depends_on:
+      - database
+  database:
+    image: mysql
+```
 
 ## コンテナを動かしてみよう
 
@@ -167,6 +252,7 @@ OS|Ubuntu 16.04
 ただし、言語によってサンプルコードの内容が違います。
 
 * [golang-apps][0]: Revelを使ったチャットアプリ
+* [javascript-apps][10]: Hubotを使ったボットアプリ
 
 [0]: https://github.com/cloud-hackathon/golang-apps
 [1]: https://github.com/
@@ -176,5 +262,17 @@ OS|Ubuntu 16.04
 [5]: https://git-scm.com
 [6]: https://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%BC%E3%83%8A%E3%82%B9%E3%83%BB%E3%83%88%E3%83%BC%E3%83%90%E3%83%AB%E3%82%BA
 [7]: http://www.backlog.jp/git-guide/
-[8]: https://www.amazon.co.jp/Git%E3%81%AB%E3%82%88%E3%82%8B%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E7%AE%A1%E7%90%86-%E5%B2%A9%E6%9D%BE%E4%BF%A1%E6%B4%8B-%E4%B8%8A%E5%B7%9D%E7%B4%94%E4%B8%80-%E3%81%BE%E3%81%88%E3%81%A0%E3%81%93%E3%81%86%E3%81%B8%E3%81%84-%E5%B0%8F%E5%B7%9D%E4%BC%B8%E4%B8%80%E9%83%8E-ebook/dp/B01IGW562K/ref=sr_1_15?s=books&ie=UTF8&qid=1484651787&sr=1-15&keywords=git
+[8]: https://www.amazon.co.jp/dp/B01IGW562K/
 [9]: http://nvie.com/posts/a-successful-git-branching-model/
+[10]: https://github.com/cloud-hackathon/javascript-apps
+[11]: https://thinkit.co.jp/story/2015/08/11/6285
+[12]: http://cn.teldevice.co.jp/column/detail/id/102
+[13]: https://www.docker.com
+[14]: https://thinkit.co.jp/story/2015/08/05/6284
+[15]: http://www.slideshare.net/zembutsu/docker-images-containers-and-lifecycle
+[16]: https://docs.docker.com/compose/
+[17]: https://blog.docker.com/2016/02/containers-as-a-service-caas/
+[18]: http://www.vmware.com/products/player/playerpro-evaluation.html
+[19]: https://www.virtualbox.org
+[20]: https://www.ubuntu.com
+[21]: https://ja.wikipedia.org/wiki/YAML
