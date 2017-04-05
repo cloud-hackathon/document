@@ -165,7 +165,7 @@ $ ssh ninja@<YOUR TEAM ADDRESS>
 方式が幾つかありますが、楽&誰でも入れるVMなのでToken形式がオススメです。  
 
 ```
-$ git clone https://<YOUR ACCOUNT>:<PASSWORD>@github.com/cloud-hackathon/python-apps.git
+$ git clone https://github.com/cloud-hackathon/python-apps.git
 ```
 
 早速動かしたいところですが、先にDockerについてご説明します。  
@@ -401,7 +401,7 @@ Name|Value
 ----|-----
 VM|[Cloudn FLAT Compute][2] / 2CPU / 4GB RAM / 15G DISK
 OS|Ubuntu 16.04
-公開ポート|22, 8081-8089
+公開ポート|22, 8080-8090
 
 
 [0]: https://github.com/cloud-hackathon/golang-apps
