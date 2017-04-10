@@ -212,6 +212,12 @@ Dockerfileを使えば、Dockerイメージを簡単に作ることができま�
 例えば、[Ubuntu][20]上で `hello-world.rb` というスクリプトを動かすコンテナを考えます。  
 Rubyをインストールして、スクリプトをコンテナに追加するだけで完成です。  
 
+* hello-world.rb
+```ruby
+puts "Hello World!"
+```
+
+* Dockerfile
 ```dockerfile
 FROM ubuntu:16.04
 
