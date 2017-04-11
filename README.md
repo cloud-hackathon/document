@@ -219,7 +219,7 @@ RUN apt-get update && \
     apt-get -y upgrade && \
     apt-get -y install ruby
 
-ADD hello-world.rb
+ADD hello-world.rb .
 
 CMD ruby hello-world.rb
 ```
