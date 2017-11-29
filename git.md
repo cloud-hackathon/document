@@ -1,11 +1,12 @@
 ## そもそもGitとは?
 
-[Git](https://git-scm.com)はオープンソースの分散バージョン管理システムです。  
+[Git](https://git-scm.com) はオープンソースの分散バージョン管理システムです。  
 v1で保存したあと開発が進みv3に。途中でv1の方がよかったなと思ったらすぐにv1に戻すことができます。  
-このシステムは、Linuxのソースコードを管理するために[リーナス](https://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%BC%E3%83%8A%E3%82%B9%E3%83%BB%E3%83%88%E3%83%BC%E3%83%90%E3%83%AB%E3%82%BA)さんによって開発されました。  
-先ほどアカウントを作成した[Github](https://github.com/)は、このGitの仕組みを利用してソースコードを保存/公開できるようにしたWebサービスです。
+このシステムは、Linuxのソースコードを管理するために [リーナス](https://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%BC%E3%83%8A%E3%82%B9%E3%83%BB%E3%83%88%E3%83%BC%E3%83%90%E3%83%AB%E3%82%BA) さんによって開発されました。  
+先ほどアカウントを作成した [GitHub](https://github.com/) は、このGitの仕組みを利用して  
+ソースコードを保存/公開できるようにしたWebサービスです。
 
-### チーム開発とGithub
+### チーム開発とGitHub
 
 ![git](img/git.png)
 
@@ -13,8 +14,8 @@ Gitは、1人よりもチーム開発で使用するとありがたみが増し�
 それは、チームのメンバーが並行して同じファイルに対して修正を加えても  
 他のメンバーの修正内容を取り込むための便利な機能があるからです。  
 
-> [Git flow](http://nvie.com/posts/a-successful-git-branching-model/)というプロジェクト開発に便利なGitの使い方があり、
-> 弊社含めこの方法で開発しているところが多いです
+> [Git flow](http://nvie.com/posts/a-successful-git-branching-model/) というプロジェクト開発に便利なGitの使い方があり、  
+> 弊社含めこの方法で開発しているところが多いです。
 
 ### チートシート
 
@@ -22,52 +23,40 @@ Gitは、1人よりもチーム開発で使用するとありがたみが増し�
 他にやりたいことがあれば、スタッフに聞いてみてください。
 
 * Gitの設定
-
-   ```
-   $ git config --global user.name <YOUR NAME>
-   $ git config --global user.email <YOUR EMAIL>
-   ```
-
+    ```
+    $ git config --global user.name <YOUR NAME>
+    $ git config --global user.email <YOUR EMAIL>
+    ```
 * リモート(Githubとか)からレポジトリをダウンロード
-
-   ```
-   $ git clone <REPOSITORY PATH>
-   ```
-   
-> cloneするときのRepositoryの形式で認証方法が変わります
-> ■ SSHを使う場合(鍵は~/.ssh/id_rsa, もしくは~/.ssh/configで指定したもの)
-> $ git clone git@github.com:{アカウント}/{リポジトリ名}.git
-> ■ HTTPSを使い都度Loginする場合
-> $ git clone https://github.com/{アカウント}/{リポジトリ名}.git
-> ■ HTTPSを使いTokenを使用する場合
-> $ git clone https://{アカウント}:{アクセストークン}@github.com/{アカウント}/{リポジトリ名}
-
+    ```
+    $ git clone <REPOSITORY PATH>
+    ```
+    > cloneするときのRepositoryの形式で認証方法が変わります。  
+    > * SSHを使う場合(鍵は `~/.ssh/id_rsa` もしくは `~/.ssh/config` で指定したもの)  
+    > `$ git clone git@github.com:{アカウント}/{リポジトリ名}.git`  
+    > * HTTPSを使い都度Loginする場合  
+    > `$ git clone https://github.com/{アカウント}/{リポジトリ名}.git`  
+    > * HTTPSを使いTokenを使用する場合  
+    > `$ git clone https://{アカウント}:{アクセストークン}@github.com/{アカウント}/{リポジトリ名}`
 * ファイルの追加(インデックス登録)
-
-   ```
-   # 指定したファイルを追加
-   $ git add <FILE NAME>
-   # すべてのファイルを追加
-   $ git add --all
-   ```
-
+    ```
+    # 指定したファイルを追加
+    $ git add <FILE NAME>
+    # すべてのファイルを追加
+    $ git add --all
+    ```
 * 変更内容を確定させる(コミット)
-
-   ```
-   $ git commit -m '<MESSAGE>'
-   ```
-
+    ```
+    $ git commit -m '<MESSAGE>'
+    ```
 * 変更内容をリモートにアップロード
-
-   ```
-   $ git push origin <BRANCH_NAME>
-   ```
-   
+    ```
+    $ git push origin <BRANCH_NAME>
+    ```
 * すべての変更内容をリモードからダウンロード
-
-   ```
-   $ git pull
-   ```
+    ```
+    $ git pull
+    ```
 
 ### もっとGitを知るには?
 
