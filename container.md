@@ -4,7 +4,7 @@
 コンテナにはCPUやメモリなどのリソースが割り当てられ、プロセスの実行環境が分離されます。  
 (namespaceやcgroupsというLinuxカーネルの技術を使っています。)
 
-[VMWare Player](http://www.vmware.com/products/player/playerpro-evaluation.html)や[Oracle VirtualBox](https://www.virtualbox.org)などのハイパーバイザ型の仮想化と比較して高速・軽量という特徴があります。
+[VMWare Player](http://www.vmware.com/products/player/playerpro-evaluation.html) や [Oracle VirtualBox](https://www.virtualbox.org) などのハイパーバイザ型の仮想化と比較して高速・軽量という特徴があります。  
 ハイパーバイザではハードウェアをシミュレートして仮想マシンを動作させているため、  
 オーバーヘッドが大きくなりがちです。
 

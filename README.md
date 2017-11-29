@@ -1,10 +1,13 @@
 # Cloud Hackathon
 
 * [はじめに](introduction.md)
-* [Githubのアカウント作成](github.md)
+* [GitHubのアカウント作成](github.md)
 * [そもそもGitとは?](git.md)
-* [サンプルコードを動かしてみよう](sample_application.md)
 * [コンテナとは?](container.md)
 * [Dockerとは?](docker.md)
-* [開発サイクルを回してみよう](development_cycle.md)
-* [その他](others.md)
+
+## Docker Compose
+
+* [サンプルコードを動かしてみよう](docker_compose/sample_application.md)
+* [開発サイクルを回してみよう](docker_compose/development_cycle.md)
+* [その他](docker_compose/others.md)
