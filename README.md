@@ -10,6 +10,11 @@
 * [Hubotとは?](slack/hubot.md)
 * [Slack/Botの便利なリンク集](slack/links.md)
 
+## tsuru
+
+* [tsuruとは?](tsuru/tsuru.md)
+* [Hubotをtsuruにデプロイしてみよう](tsuru/sample_application.md)
+
 ## 参考資料
 
 * [Gitとは?](git.md)
