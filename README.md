@@ -1,12 +1,15 @@
 # Cloud Hackathon
 
 * [はじめに](introduction.md)
+
 <!--
 * [GitHubのアカウント作成](github.md)
 -->
 
 ## Slack 
 
+* [Slackとは？](slack/abstract.md)
+* [Slack appを追加してみよう](slack/integration.md)
 * [Hubotとは?](slack/hubot.md)
 * [Slack/Botの便利なリンク集](slack/links.md)
 
