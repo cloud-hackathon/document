@@ -2,9 +2,14 @@
 
 * [はじめに](introduction.md)
 * [GitHubのアカウント作成](github.md)
-* [そもそもGitとは?](git.md)
+* [Gitとは?](git.md)
 * [コンテナとは?](container.md)
 * [Dockerとは?](docker.md)
+
+## Slack Bot 
+
+* [Hubotとは?](slack_bot/hubot.md)
+* [便利なリンク集](slack_bot/links.md)
 
 ## Docker Compose
 
