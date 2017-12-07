@@ -7,7 +7,7 @@ App capabilitiesセクションにある通り、開発者は様々な方法でS
 2. `Slash Commands`: ユーザからのコマンドに合わせたタスクを実行する
 3. `Bot User`: ユーザと対話しながらタスクを実行する
 4. `Internal Integrations`: 他者に公開しないドメスティックなSlack appの総称
-5. `Message Buttons`: メッセージにポタンを追加する
+5. `Message Buttons`: メッセージにボタンを追加する
 6. `Real Time Messaging and Events`: 条件を満たしたときにメッセージを投稿する
 7. `Permission Scope`: Slack appの権限を管理する
 8. `OAuth`: Slack appを認証する
