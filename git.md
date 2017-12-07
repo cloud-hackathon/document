@@ -68,8 +68,8 @@ Gitを本格的に使ってみたいなと思った方は、以下のサイト�
 * [Gitによるバージョン管理](https://www.amazon.co.jp/dp/B01IGW562K/)
 
 
-### git インストール法
+### Gitのインストール方法
 
-git をインストール指定ない人は以下のURLを参考にインストールを行って下さい。
+Gitをインストール指定ない人は以下のURLを参考にインストールを行って下さい。
 
-* https://git-scm.com/book/ja/v2/%E4%BD%BF%E3%81%84%E5%A7%8B%E3%82%81%E3%82%8B-Git%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB
+* [Gitのインストール](https://git-scm.com/book/ja/v2/%E4%BD%BF%E3%81%84%E5%A7%8B%E3%82%81%E3%82%8B-Git%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB)
