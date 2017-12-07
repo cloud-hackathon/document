@@ -21,7 +21,8 @@ Botとしての基本的な機能(チャットの取得と発言など)は、Hub
 
 ### HubotでBotを作ってみる
 
-Hubotを動作させるためにNode.jsとnpmをインストールします。  
+Hubotを動作させるためにNode.jsとnpmをインストールします。
+Windowsの方は [nodistでNode.jsをバージョン管理](https://qiita.com/satoyan419/items/56e0b5f35912b9374305) を参考にしてください。  
 (参考: [Hubot のインストール](https://qiita.com/bouzuya/items/11c0c6da2b3ad54b827f) )
 
 ```
@@ -78,11 +79,8 @@ myhubot> World!
 ### HubotをSlackで動作させてみる
 
 HubotをSlackに接続して、チャットサービス上で動作させてみます。  
-[こちら](https://slack.com/apps/new/A0F7XDU93-hubot) で `Username` を入力して `API Token` を取得します。
-
-![hubot_integration](../img/hubot_integration.png)
-
-取得したトークンを `HUBOT_SLACK_TOKEN` という環境変数に設定してHubotを起動します。
+[Slack Appを追加してみよう](integration.md) に従ってトークンを取得し、  
+`HUBOT_SLACK_TOKEN` という環境変数に設定してHubotを起動します。
 
 ```
 $ HUBOT_SLACK_TOKEN=xoxb-abcdefghijklmnopqrstuvwxyz0123456789 bin/hubot -a slack
