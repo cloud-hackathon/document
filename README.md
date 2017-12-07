@@ -6,7 +6,7 @@
 * [GitHubのアカウント作成](github.md)
 -->
 
-## Slack 
+## Slack
 
 * [Slackとは？](slack/abstract.md)
 * [Slack appを追加してみよう](slack/integration.md)
