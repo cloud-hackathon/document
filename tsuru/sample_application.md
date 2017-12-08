@@ -29,6 +29,16 @@ tsuruでアプリケーションを作成するとリポジトリのアドレス
 $ tsuru app-create myhubot nodejs
 ```
 
+今回はPlatform(アプリケーションの実行基盤)に `nodejs` を使用していますが、下記の言語も選択可能です。
+
+* `buildpack`
+* `go`
+* `java`
+* `nodejs`
+* `php`
+* `python`
+* `ruby`
+
 ### Gitでアプリをデプロイする
 
 `git push` でソースコードをアップロードすると、デプロイが始まります。  
