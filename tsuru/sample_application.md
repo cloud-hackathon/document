@@ -50,7 +50,7 @@ $ cd myhubot
 $ git init
 $ git add .
 $ git commit -m 'first commit' 
-$ git remote add tsuru git@hico.cloud:myhubot.git 
+$ git remote add tsuru git@example.com:myhubot.git 
 $ tsuru env-set HUBOT_SLACK_TOKEN=xoxb-abcdefghijklmnopqrstuvwxyz0123456789
 $ git push tsuru master
 ```
