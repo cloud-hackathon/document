@@ -5,16 +5,12 @@
 [tsuru/tsuru-client](https://github.com/tsuru/tsuru-client/releases/tag/1.4.0) から各OS向けのtsuru-clientをダウンロードして  
 解凍したバイナリをPATHの通ったディレクトリ( `/usr/local/bin` や `C:\Windows` など)に配置してください。
 
-### 初期設定
+### 公開鍵の作成
 
-最初に、tsuruにログインし、パスワードを変更します。  
-(URL、メールアドレス、初期パスワードはSlackでお伝えします。)
+自由に利用できる公開鍵を持っていない方は以下のように作成して下さい。  
+(本日用に作成することを推奨します。)
 
-```
-$ tsuru target-add default http://example.com:8080 -s
-$ tsuru login
-$ tsuru change-password
-```
+- [公開鍵の作成方法](../ssh_keygen.md)
 
 ### 公開鍵の登録
 
