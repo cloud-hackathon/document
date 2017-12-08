@@ -17,10 +17,10 @@ $ python bot.py
 $ # Slackで動作確認
 $ tsuru target-add default http://example.com -s
 $ tsuru login
-$ tsuru app-create <app name> python -t test
+$ tsuru key-add default ~/.ssh/id_rsa.pub
+$ tsuru app-create <app name> python -t <team name>
 $ tsuru env-set SLACK_API_TOKEN=xoxb-...
 $ tsuru env-set BOT_NAME=<bot name>
-$ tsuru key-add default ~/.ssh/id_rsa.pub
 $ git remote add tsuru git@example.com:slack-tetris.git
 $ git push tsuru master
 $ # Slackで動作確認
@@ -41,11 +41,12 @@ $ # Slackで動作確認
 $ echo 'web: bundle exec ruboty -l mahjang.rb' > Procfile
 $ git add
 $ git commit -m ""
-$ tsuru target-add default http:// -s
+$ tsuru target-add default http://example.com -s
 $ tsuru login
-$ tsuru app-create <your app name> ruby -t hackathon
+$ tsuru key-add default ~/.ssh/id_rsa.pub
+$ tsuru app-create <your app name> ruby -t <team name>
 $ tsuru env-set SLACK_TOKEN=xoxb-... -a <your app name>
-$ git remote add tsuru <your repository>
+$ git remote add tsuru git@example.com:mahjong_chatbot.git
 $ git push tsuru master
 $ # Slackで動作確認
 ```
