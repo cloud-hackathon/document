@@ -43,6 +43,7 @@ https://api.slack.com
 
 ### サンプルになりそうなBot
 
+* [cloud-hackathon/slack-tetris](https://github.com/cloud-hackathon/slack-tetris)
 * [kozyszoo/mahjong_chatbot](https://github.com/kozyszoo/mahjong_chatbot)
 * [slackapi/reacjilator](https://github.com/slackapi/reacjilator)
     * [\[Japanese\] Developing a bot for your workspace 翻訳ボットを作る!](https://www.slideshare.net/tomomi/japanese-developing-a-bot-for-your-workspace-82133038)
@@ -52,3 +53,6 @@ https://api.slack.com
     * [HubotでSlackのChannelとTrelloのBoardを連携](https://qiita.com/hiconyan/items/94941517b4df774bda4b)
 * [hico-horiuchi/emojiner](https://github.com/hico-horiuchi/emojiner)
     * [Slackで新しく追加されたCustom Emojiを教えてくれるボットを作った](https://qiita.com/hiconyan/items/adbcb0e7cbf7ce457e7f)
+* [hico-horiuchi/botkit-omikuji-command](https://github.com/hico-horiuchi/botkit-omikuji-command)
+    * [BotkitでSlackのSlash Commandを作る](https://qiita.com/hiconyan/items/b506b0631265268a850b)
+

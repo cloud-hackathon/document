@@ -21,7 +21,7 @@ Botとしての基本的な機能(チャットの取得と発言など)は、Hub
 
 ### HubotでBotを作ってみる
 
-Hubotを動作させるためにNode.jsとnpmをインストールします。
+Hubotを動作させるためにNode.jsとnpmをインストールします。  
 Windowsの方は [nodistでNode.jsをバージョン管理](https://qiita.com/satoyan419/items/56e0b5f35912b9374305) を参考にしてください。  
 (参考: [Hubot のインストール](https://qiita.com/bouzuya/items/11c0c6da2b3ad54b827f) )
 
