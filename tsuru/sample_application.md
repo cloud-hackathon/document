@@ -37,18 +37,19 @@ $ tsuru key-add default ~/.ssh/id_rsa.pub
 tsuruでアプリケーションを作成するとリポジトリのアドレスが得られます。
 
 ```
-$ tsuru app-create myhubot nodejs
+$ tsuru app-create myhubot buildpack
 ```
 
-今回はPlatform(アプリケーションの実行基盤)に `nodejs` を使用していますが、下記の言語も選択可能です。
+今回はPlatform(アプリケーションの実行基盤)に `buildpack` を使用していますが、下記の言語も選択可能です。
 
-* `buildpack`
-* `go`
-* `java`
-* `nodejs`
-* `php`
-* `python`
-* `ruby`
+* [buildpack](https://github.com/tsuru/platforms/tree/master/buildpack)
+* [go](https://github.com/tsuru/platforms/tree/master/go)
+* [java](https://github.com/tsuru/platforms/tree/master/java)
+* [nodejs](https://github.com/tsuru/platforms/tree/master/nodejs)
+* [php](https://github.com/tsuru/platforms/tree/master/php)
+* [python](https://github.com/tsuru/platforms/tree/master/python)
+* [ruby](https://github.com/tsuru/platforms/tree/master/ruby)
+* [static](https://github.com/tsuru/platforms/tree/master/static)
 
 ### Gitでアプリをデプロイする
 
