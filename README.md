@@ -15,6 +15,7 @@
 
 ## tsuru
 
+* [PaaSとは?](tsuru/paas.md)
 * [tsuruとは?](tsuru/tsuru.md)
 * [Hubotをtsuruにデプロイしてみよう](tsuru/sample_application.md)
 * [その他サンプルアプリのデプロイ手順](tsuru/procedures.md)
