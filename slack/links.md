@@ -56,3 +56,10 @@ https://api.slack.com
 * [hico-horiuchi/botkit-omikuji-command](https://github.com/hico-horiuchi/botkit-omikuji-command)
     * [BotkitでSlackのSlash Commandを作る](https://qiita.com/hiconyan/items/b506b0631265268a850b)
 
+### Advent Calendar
+
+* [Slack Advent Calendar 2017](https://qiita.com/advent-calendar/2017/slack)
+* [Slack Advent Calendar 2016](https://qiita.com/advent-calendar/2016/slack)
+* [Slack その2 Advent Calendar 2016](https://qiita.com/advent-calendar/2016/slack2)
+* [slack Advent Calendar 2015](https://qiita.com/advent-calendar/2015/slack)
+* [Slack Advent Calendar 2014](https://qiita.com/advent-calendar/2014/slack)
