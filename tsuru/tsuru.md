@@ -5,6 +5,10 @@
 [tsuru](https://github.com/tsuru/tsuru) は [Docker](https://www.docker.com) をベースにしたオープンソースのPaaS(Open PaaS)です。  
 ブラジル最大の放送局である [globo.com](http://www.globo.com/) が中心となって、Go言語で開発されています。
 
+### tsuruのアーキテクチャ
+
+![tsuru_architecture](../img/tsuru_architecture.png)
+
 ### tsuruの用語
 
 [Concepts](https://docs.tsuru.io/stable/understanding/concepts.html) より。
