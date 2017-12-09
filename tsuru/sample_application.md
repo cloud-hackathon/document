@@ -63,7 +63,7 @@ $ git init
 $ git add .
 $ git commit -m 'first commit' 
 $ git remote add tsuru git@example.com:myhubot.git 
-$ tsuru env-set HUBOT_SLACK_TOKEN=xoxb-abcdefghijklmnopqrstuvwxyz0123456789
+$ tsuru env-set HUBOT_SLACK_TOKEN=xoxb-abcdefghijklmnopqrstuvwxyz0123456789 -p
 $ git push tsuru master
 ```
 

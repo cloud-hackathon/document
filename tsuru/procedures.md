@@ -19,7 +19,7 @@ $ tsuru target-add default http://example.com -s
 $ tsuru login
 $ tsuru key-add default ~/.ssh/id_rsa.pub
 $ tsuru app-create <app name> python -t <team name>
-$ tsuru env-set SLACK_API_TOKEN=xoxb-...
+$ tsuru env-set SLACK_API_TOKEN=xoxb-... -p
 $ tsuru env-set BOT_NAME=<bot name>
 $ git remote add tsuru git@example.com:slack-tetris.git
 $ git push tsuru master
@@ -45,7 +45,7 @@ $ tsuru target-add default http://example.com -s
 $ tsuru login
 $ tsuru key-add default ~/.ssh/id_rsa.pub
 $ tsuru app-create <your app name> ruby -t <team name>
-$ tsuru env-set SLACK_TOKEN=xoxb-... -a <your app name>
+$ tsuru env-set SLACK_TOKEN=xoxb-... -a <your app name> -p
 $ git remote add tsuru git@example.com:mahjong_chatbot.git
 $ git push tsuru master
 $ # Slackで動作確認
