@@ -19,6 +19,7 @@
 * [tsuruとは?](tsuru/tsuru.md)
 * [Hubotをtsuruにデプロイしてみよう](tsuru/sample_application.md)
 * [その他サンプルアプリのデプロイ手順](tsuru/procedures.md)
+* [困ったときのQ&A](tsuru/q_and_a.md)
 
 ## 参考資料
 
