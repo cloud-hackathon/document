@@ -17,7 +17,9 @@
 
 * [PaaSとは?](tsuru/paas.md)
 
-### CloudFoundry
+### Cloud Foundry
+
+* [HubotをCloud Foundryにデプロイしてみよう](cloud_foundry/sample_application.md)
 
 ## 参考資料
 
