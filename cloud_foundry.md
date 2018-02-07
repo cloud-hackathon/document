@@ -16,7 +16,7 @@
 
 ### コンポーネント
 主に公式の[document](http://docs.cloudfoundry.org/concepts/architecture/index.html)を元に記述しています。
-![architecture_block](../img/cf_architecture_block.png)
+![architecture_block](img/cf_architecture_block.png)
 
 - Routing
     - Router
