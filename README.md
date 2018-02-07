@@ -13,13 +13,11 @@
 * [Hubotとは?](slack/hubot.md)
 * [Slack/Botの便利なリンク集](slack/links.md)
 
-## tsuru
+## PaaS
 
 * [PaaSとは?](tsuru/paas.md)
-* [tsuruとは?](tsuru/tsuru.md)
-* [Hubotをtsuruにデプロイしてみよう](tsuru/sample_application.md)
-* [その他サンプルアプリのデプロイ手順](tsuru/procedures.md)
-* [困ったときのQ&A](tsuru/q_and_a.md)
+
+### CloudFoundry
 
 ## 参考資料
 
@@ -33,4 +31,11 @@
 * [サンプルコードを動かしてみよう](docker_compose/sample_application.md)
 * [開発サイクルを回してみよう](docker_compose/development_cycle.md)
 * [その他](docker_compose/others.md)
+
+## tsuru
+
+* [tsuruとは?](tsuru/tsuru.md)
+* [Hubotをtsuruにデプロイしてみよう](tsuru/sample_application.md)
+* [その他サンプルアプリのデプロイ手順](tsuru/procedures.md)
+* [困ったときのQ&A](tsuru/q_and_a.md)
 -->
