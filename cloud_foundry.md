@@ -5,11 +5,11 @@
 
 
 ### 簡易なCF上での流れ(build packを実行する場合)
-1. ユーザがpush
+1. ユーザがアプリをpush
 2. Buildpackが実行される
-    2-1. Detect(buildpackの実行条件と合致するかチェック)
-    2-2. Compile(実行環境を構築)
-    2-3. Release(実行に必要な環境変数などの情報を出力)
+    - 2-1. Detect(buildpackの実行条件と合致するかチェック)
+    - 2-2. Compile(実行環境を構築)
+    - 2-3. Release(実行に必要な環境変数などの情報を出力)
 3. Cloud Foundryの実行ノードでアプリを起動
 
 [参考](https://www.slideshare.net/jacopen/paas-for-beginners)
