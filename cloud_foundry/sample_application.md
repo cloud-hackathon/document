@@ -1,15 +1,5 @@
 ## HubotをCloud Foundryにデプロイしてみよう
 
-### cf(Cloud Foundry Client)のダウンロード
-
-下記のリンクから各OS向けのcfをダウンロードして  
-解凍したバイナリをPATHの通ったディレクトリ( `/usr/local/bin` や `C:\Windows` など)に配置してください。
-
-- [Debian/Ubuntu](https://cli.run.pivotal.io/stable?release=debian64&version=6.21.1&source=github-rel)
-- [RedHat/CentOS](https://cli.run.pivotal.io/stable?release=redhat64&version=6.21.1&source=github-rel)
-- [Windows](https://cli.run.pivotal.io/stable?release=windows64&version=6.21.1&source=github-rel)
-- [macOS](https://cli.run.pivotal.io/stable?release=macosx64&version=6.21.1&source=github-rel)
-
 ### 初期設定
 
 最初に、Cloud Foundryにログインします。  
@@ -19,6 +9,16 @@
 $ cf login -a [URL] -u [API鍵] -p [API秘密鍵]
 Space> [スペース]
 ```
+
+### cf(Cloud Foundry Client)のダウンロード
+
+下記のリンクから各OS向けのcfをダウンロードして  
+解凍したバイナリをPATHの通ったディレクトリ( `/usr/local/bin` や `C:\Windows` など)に配置してください。
+
+- [Debian/Ubuntu](https://cli.run.pivotal.io/stable?release=debian64&version=6.21.1&source=github-rel)
+- [RedHat/CentOS](https://cli.run.pivotal.io/stable?release=redhat64&version=6.21.1&source=github-rel)
+- [Windows](https://cli.run.pivotal.io/stable?release=windows64&version=6.21.1&source=github-rel)
+- [macOS](https://cli.run.pivotal.io/stable?release=macosx64&version=6.21.1&source=github-rel)
 
 ### Cloud Foundryにアプリをデプロイする
 
@@ -44,6 +44,13 @@ $ cf app myhubot
 
 ```
 $ cf logs myhubot --recent
+```
+
+### アプリのコンテナの中に入ってみる
+
+```
+$ cf enable-ssh myhubot
+$ cf ssh myhubot
 ```
 
 ### 参考文献
