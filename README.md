@@ -19,6 +19,7 @@
 
 ### Cloud Foundry
 
+* [Cloud Foundryとは?](cloud_foundry/cloud_foundry.md)
 * [HubotをCloud Foundryにデプロイしてみよう](cloud_foundry/sample_application.md)
 
 ## 参考資料
