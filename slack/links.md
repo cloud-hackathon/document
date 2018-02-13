@@ -43,6 +43,7 @@ https://api.slack.com
 
 ### サンプルになりそうなBot
 
+* [cloud-hackathon/ruby-apps/ruboty-bot](https://github.com/cloud-hackathon/ruby-apps/tree/master/ruboty-bot)
 * [cloud-hackathon/slack-tetris](https://github.com/cloud-hackathon/slack-tetris)
 * [kozyszoo/mahjong_chatbot](https://github.com/kozyszoo/mahjong_chatbot)
 * [slackapi/reacjilator](https://github.com/slackapi/reacjilator)
