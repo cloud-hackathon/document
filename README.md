@@ -21,6 +21,7 @@
 
 * [Cloud Foundryとは?](cloud_foundry/cloud_foundry.md)
 * [HubotをCloud Foundryにデプロイしてみよう](cloud_foundry/sample_application.md)
+* [その他サンプルアプリのデプロイ手順](cloud_foundry/procedures.md)
 
 ## 参考資料
 
