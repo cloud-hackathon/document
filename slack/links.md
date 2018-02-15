@@ -45,6 +45,7 @@ https://api.slack.com
 
 * [cloud-hackathon/ruby-apps/ruboty-bot](https://github.com/cloud-hackathon/ruby-apps/tree/master/ruboty-bot)
 * [cloud-hackathon/slack-tetris](https://github.com/cloud-hackathon/slack-tetris)
+* [kazshinohara/slackbot_sample](https://github.com/kazshinohara/slackbot_sample)
 * [kozyszoo/mahjong_chatbot](https://github.com/kozyszoo/mahjong_chatbot)
 * [slackapi/reacjilator](https://github.com/slackapi/reacjilator)
     * [\[Japanese\] Developing a bot for your workspace 翻訳ボットを作る!](https://www.slideshare.net/tomomi/japanese-developing-a-bot-for-your-workspace-82133038)
