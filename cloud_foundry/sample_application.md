@@ -28,6 +28,13 @@ Space> [スペース]
 ```
 $ cd myhubot
 $ npm install --save coffee-script
+```
+Procfileの確認・必要なら書き換え
+```
+$ cat Procfile
+web: bin/hubot -a slack
+```
+```
 $ cf push myhubot
 $ cf set-env myhubot HUBOT_SLACK_TOKEN xoxb-abcdefghijklmnopqrstuvwxyz0123456789
 $ cf restart myhubot
