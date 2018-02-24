@@ -33,6 +33,9 @@ $ cf set-env myhubot HUBOT_SLACK_TOKEN xoxb-abcdefghijklmnopqrstuvwxyz0123456789
 $ cf restart myhubot
 ```
 
+> note: デプロイに失敗し，「The app upload is invalid: Symlink(s) point outside of root folder」とエラーがエラーが出る時の対処法
+> "rm -R ./node_modules" を実行してください
+
 `cf app myhubot` でデプロイしたアプリの状態を確認できます。  
 `state` (状態)が `running` (実行)になっていれば :+1: です。
 
